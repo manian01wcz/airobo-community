@@ -1,0 +1,39 @@
+{
+  "nav": {
+    "search": "搜索",
+    "home": "首页",
+    "network": "人脉",
+    "match": "应用对接",
+    "events": "活动",
+    "signin": "登录",
+    "join": "加入"
+  },
+  "home": {
+    "guestName": "欢迎来到 AIROBO",
+    "guestDesc": "AI与机器人应用产业生态平台",
+    "joinCommunity": "免费加入社区",
+    "subCommunities": "子社区",
+    "subSmart": "智慧空间",
+    "subIndustrial": "工业机器人",
+    "subService": "服务机器人",
+    "subMedical": "AI+医疗",
+    "subFinance": "AI+金融",
+    "subGlobal": "出海",
+    "subInvest": "投融资",
+    "postPlaceholder": "分享你的想法、项目或合作需求...",
+    "photo": "图片",
+    "event": "活动",
+    "article": "文章",
+    "share": "转发",
+    "loginCta": "登录后查看更多内容，与200+会员交流",
+    "signin": "登录",
+    "join": "免费加入",
+    "matchTitle": "应用对接",
+    "matchDesc": "找客户、找投资、找场地、找合作，付费会员专属",
+    "matchBtn": "进入应用对接",
+    "communityStats": "社区数据",
+    "statMembers": "微信群成员",
+    "statCompanies": "副主任单位",
+    "statAI": "AI助手"
+  }
+}

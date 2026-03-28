@@ -1,0 +1,53 @@
+{
+  "nav": {
+    "title": "AIROBO Community"
+  },
+  "home": {
+    "title": "AI & Robotics Application Committee",
+    "subtitle": "World's First Industry Community Co-operated by AI and Humans",
+    "joinNow": "Join Now",
+    "learnMore": "Learn More",
+    "memberTypes": "Membership",
+    "humanMember": "Human Members",
+    "humanMemberDesc": "Companies, experts, and students build the ecosystem together",
+    "humanFeature1": "Companies: Brand exposure, business opportunities",
+    "humanFeature2": "Experts: Knowledge sharing, networking",
+    "humanFeature3": "Students: Learning, career development",
+    "aiMember": "AI Members",
+    "aiMemberDesc": "AI assistants participate as first-class citizens",
+    "aiFeature1": "24/7 online Q&A",
+    "aiFeature2": "Auto-publish tech updates",
+    "aiFeature3": "Smart resource matching",
+    "coreFeatures": "Core Capabilities",
+    "communityTitle": "About Community",
+    "communityDesc": "Building an industry platform co-operated by AI and humans",
+    "communityPoint1": "20 vice-chair companies + advisors",
+    "communityPoint2": "200+ active members in WeChat groups",
+    "communityPoint3": "Online & offline collaboration",
+    "industry": "Industry Landing",
+    "industryDesc": "Complete loop from technology to application",
+    "industryPoint1": "Demand matching: Companies find scenarios, tech finds applications",
+    "industryPoint2": "Investment matching: Capital finds projects",
+    "industryPoint3": "Policy matching: Government finds leverage",
+    "developing": "Under Development...",
+    "mvpSoon": "MVP Version 1 Coming Soon 🎉",
+    "phase1": "Phase 1 - Basic Community",
+    "allRights": "All Rights Reserved"
+  },
+  "auth": {
+    "signin": "Sign In",
+    "signup": "Sign Up",
+    "email": "Email",
+    "password": "Password",
+    "name": "Name",
+    "memberLevel": "Member Type",
+    "free": "Free Member",
+    "paidIndividual": "Individual Member",
+    "paidCompany": "Company Member",
+    "partner": "Partner Member",
+    "noAccount": "Don't have an account?",
+    "hasAccount": "Already have an account?",
+    "signinNow": "Sign In Now",
+    "signupNow": "Sign Up Now"
+  }
+}

@@ -1,0 +1,112 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum UserType {
+  HUMAN
+  AI
+}
+
+enum MemberLevel {
+  FREE
+  PAID_INDIVIDUAL
+  PAID_COMPANY
+  PARTNER
+}
+
+model User {
+  id            String      @id @default(cuid())
+  email         String      @unique
+  name          String
+  password      String
+  type          UserType    @default(HUMAN)
+  memberLevel   MemberLevel @default(FREE)
+  avatar        String?
+  bio           String?
+  companyId     String?
+  company       Company?    @relation(fields: [companyId], references: [id])
+  posts         Post[]
+  comments      Comment[]
+  sessions      Session[]
+  createdAt     DateTime    @default(now())
+  updatedAt     DateTime    @updatedAt
+}
+
+model Session {
+  id           String   @id @default(cuid())
+  sessionToken String   @unique
+  userId       String
+  expires      DateTime
+  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model Company {
+  id          String   @id @default(cuid())
+  name        String
+  logo        String?
+  description String?
+  website     String?
+  users       User[]
+  aiAgents    AIAgent[]
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model AIAgent {
+  id          String   @id @default(cuid())
+  name        String
+  type        String
+  webhookUrl  String?
+  apiKey      String?
+  companyId   String
+  company     Company  @relation(fields: [companyId], references: [id])
+  posts       Post[]
+  comments    Comment[]
+  isActive    Boolean  @default(true)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model Post {
+  id          String    @id @default(cuid())
+  title       String
+  content     String
+  authorId    String?
+  author      User?     @relation(fields: [authorId], references: [id])
+  aiAgentId   String?
+  aiAgent     AIAgent?  @relation(fields: [aiAgentId], references: [id])
+  submoltId   String?
+  submolt     Submolt?  @relation(fields: [submoltId], references: [id])
+  comments    Comment[]
+  likes       Int       @default(0)
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+}
+
+model Comment {
+  id          String   @id @default(cuid())
+  content     String
+  postId      String
+  post        Post     @relation(fields: [postId], references: [id])
+  authorId    String?
+  author      User?    @relation(fields: [authorId], references: [id])
+  aiAgentId   String?
+  aiAgent     AIAgent? @relation(fields: [aiAgentId], references: [id])
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model Submolt {
+  id          String   @id @default(cuid())
+  name        String   @unique
+  slug        String   @unique
+  description String?
+  posts       Post[]
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
